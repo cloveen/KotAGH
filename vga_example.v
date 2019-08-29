@@ -223,13 +223,13 @@ draw_rect my_draw_rect(
     .rst(rst),
     .xpos(xpos_ctl),
     .ypos(ypos_ctl), 
-    .vcount_in(vcount_out_test),
-    .vsync_in(vsync_out_test),        
-    .vblnk_in(vblnk_out_test),        
-    .hcount_in(hcount_out_test),
-    .hsync_in(hsync_out_test),        
-    .hblnk_in(hblnk_out_test),
-    .rgb_in(rgb_out_test),
+    .vcount_in(vcount_out_ch),
+    .vsync_in(vsync_out_ch),        
+    .vblnk_in(vblnk_out_ch),        
+    .hcount_in(hcount_out_ch),
+    .hsync_in(hsync_out_ch),        
+    .hblnk_in(hblnk_out_ch),
+    .rgb_in(rgb_out_ch),
     .rgb_pixel(rgb_pixel2), 
     
     .hblnk_out(hblnk_out_a),
@@ -385,15 +385,15 @@ always @(posedge pclk)
 //end 
      
    draw_rect_char my_rect_char (
-    .hcount_in(hcount_out_a),
-    .hsync_in(hsync_out_a),
-    .hblnk_in(hblnk_out_a),
-    .vcount_in(vcount_out_a),
-    .vsync_in(vsync_out_a),
-    .vblnk_in(vblnk_out_a),
+    .hcount_in(hcount_out_test),
+    .hsync_in(hsync_out_test),
+    .hblnk_in(hblnk_out_test),
+    .vcount_in(vcount_out_test),
+    .vsync_in(vsync_out_test),
+    .vblnk_in(vblnk_out_test),
     .rst(rst),
     .pclk(pclk),
-    .rgb_in(rgb_out_a),
+    .rgb_in(rgb_out_test),
     .char_pixels(char_pixels),
     
     .hcount_out(hcount_out_ch),
@@ -427,9 +427,9 @@ always @(posedge pclk)
 begin
   x_buff <= xpos;
   y_buff <= ypos;
-  vs <= vsync_out_ch;
-  hs <= hsync_out_ch;
-  {r,g,b} <= rgb_out_ch;
+  vs <= vsync_out_a;
+  hs <= hsync_out_a;
+  {r,g,b} <= rgb_out_a;
   counter_bin <= score;
 end
 

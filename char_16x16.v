@@ -50,18 +50,18 @@ module char_16x16(
                      8'h0c: char_code = 7'h74; // t
                      8'h0d: char_code = 7'h73; // s
                      8'h0e: char_code = 7'h20; // 
-                     8'h0f: char_code = 7'h69; // i
-                     8'h10: char_code = 7'h66; // f
-                     8'h11: char_code = 7'h20; // 
-                     8'h12: char_code = 7'h79; // y
-                     8'h13: char_code = 7'h6f; // o
-                     8'h14: char_code = 7'h75; // u
-                     8'h15: char_code = 7'h20; // 
-                     8'h16: char_code = 7'h63; // c
-                     8'h17: char_code = 7'h61; // a
-                     8'h18: char_code = 7'h6e; // n
-                     8'h19: char_code = 7'h21; // !
-                     8'h1a: char_code = 7'h20; // 
+                     8'h0f: char_code = 7'h20; // 
+                     8'h10: char_code = 7'h69; // i
+                     8'h11: char_code = 7'h66; // f
+                     8'h12: char_code = 7'h20; // 
+                     8'h13: char_code = 7'h79; // y
+                     8'h14: char_code = 7'h6f; // o
+                     8'h15: char_code = 7'h75; // u
+                     8'h16: char_code = 7'h20; // 
+                     8'h17: char_code = 7'h63; // c
+                     8'h18: char_code = 7'h61; // a
+                     8'h19: char_code = 7'h6e; // n
+                     8'h1a: char_code = 7'h21; // ! 
                      8'h1b: char_code = 7'h20; // 
                      8'h1c: char_code = 7'h20; // 
                      8'h1d: char_code = 7'h20; //  
@@ -81,14 +81,14 @@ module char_16x16(
                      8'h2b: char_code = 7'h74; // t
                      8'h2c: char_code = 7'h6f; // o
                      8'h2d: char_code = 7'h20; //
-                     8'h2e: char_code = 7'h73; // s
-                     8'h2f: char_code = 7'h74; // t
-                     8'h30: char_code = 7'h61; // a
-                     8'h31: char_code = 7'h72; // r
-                     8'h32: char_code = 7'h74; // t
-                     8'h33: char_code = 7'h2e; // .
-                     8'h34: char_code = 7'h20; // 
-                     8'h35: char_code = 7'h20; // 
+                     8'h2e: char_code = 7'h20; //
+                     8'h2f: char_code = 7'h20; //
+                     8'h30: char_code = 7'h73; // s
+                     8'h31: char_code = 7'h74; // t
+                     8'h32: char_code = 7'h61; // a
+                     8'h33: char_code = 7'h72; // r
+                     8'h34: char_code = 7'h74; // t
+                     8'h35: char_code = 7'h2e; // .
                      8'h36: char_code = 7'h20; // 
                      8'h37: char_code = 7'h20; // 
                      8'h38: char_code = 7'h20; // 
@@ -296,7 +296,7 @@ module char_16x16(
         PLAY:
         begin
            case(char_xy) 
-                 /*    8'h00: char_code = 7'h20; // 
+                     8'h00: char_code = 7'h20; // 
                      8'h01: char_code = 7'h20; // 
                      8'h02: char_code = 7'h20; // 
                      8'h03: char_code = 7'h20; // 
@@ -551,7 +551,7 @@ module char_16x16(
                      8'hfc: char_code = 7'h20; // 
                      8'hfd: char_code = 7'h20; // 
                      8'hfe: char_code = 7'h20; // 
-                     8'hff: char_code = 7'h20; // */
+                     8'hff: char_code = 7'h20; // 
                  endcase
         end
         END:
@@ -572,18 +572,18 @@ module char_16x16(
                   8'h0c: char_code = 7'h74; // t
                   8'h0d: char_code = 7'h6f; // o
                   8'h0e: char_code = 7'h20; // 
-                  8'h0f: char_code = 7'h70; // p
-                  8'h10: char_code = 7'h6c; // l
-                  8'h11: char_code = 7'h61; // a
-                  8'h12: char_code = 7'h79; // y
-                  8'h13: char_code = 7'h20; // 
-                  8'h14: char_code = 7'h61; // a
-                  8'h15: char_code = 7'h67; // g
-                  8'h16: char_code = 7'h61; // a
-                  8'h17: char_code = 7'h69; // i
-                  8'h18: char_code = 7'h6e; // n
-                  8'h19: char_code = 7'h2e; // .
-                  8'h1a: char_code = 7'h20; // 
+                  8'h0f: char_code = 7'h20; // 
+                  8'h10: char_code = 7'h70; // p
+                  8'h11: char_code = 7'h6c; // l
+                  8'h12: char_code = 7'h61; // a
+                  8'h13: char_code = 7'h79; // y
+                  8'h14: char_code = 7'h20; // 
+                  8'h15: char_code = 7'h61; // a
+                  8'h16: char_code = 7'h67; // g
+                  8'h17: char_code = 7'h61; // a
+                  8'h18: char_code = 7'h69; // i
+                  8'h19: char_code = 7'h6e; // n
+                  8'h1a: char_code = 7'h2e; // .
                   8'h1b: char_code = 7'h20; // 
                   8'h1c: char_code = 7'h20; // 
                   8'h1d: char_code = 7'h20; //  

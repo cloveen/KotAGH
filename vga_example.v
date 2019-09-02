@@ -215,7 +215,7 @@ draw_rect my_draw_rect(
   );
         reg[11:0] test_rect_pos = 200, test_rect_pos_nxt;
         
-     `M_DRAW_RECT(r, test, test_rect_pos, 300, image_rom, 48, 64);
+     `M_DRAW_RECT(r, test, test_rect_pos, 300, image_rom, 1, 1);
 
 
   draw_cat my_draw_cat(

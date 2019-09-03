@@ -44,8 +44,8 @@ module draw_rect_char(
     );
     
  
-    localparam LETTERS = 12'h4_4_4, BG = 12'h8_8_8;
-    localparam RECT_X = 350, RECT_Y = 250; 
+    localparam LETTERS = 12'h4_4_4, BG = 12'hE_8_E;
+    localparam RECT_X = 100, RECT_Y = 220; 
     
       reg [11:0] rgb_nxt, pixel_addr_nxt, x_pos_reg, y_pos_reg;
       reg hsync_delay1, vsync_delay1, hsync_delay2, vsync_delay2;

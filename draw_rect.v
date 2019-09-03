@@ -68,7 +68,7 @@ module draw_rect(
     );
 
 
-parameter RECT_WIDTH= 'd48;
+parameter RECT_WIDTH= 'd64;
 parameter RECT_HEIGHT = 'd64;
 //localparam RECT_RGB = 12'he_8_d;
 
@@ -133,7 +133,7 @@ always @*
          hblnk_out_nxt = hblnk_in;
          rgb_in_buff = rgb_in;
          
-         if((vcount_in <= (ypos + RECT_HEIGHT)) && (vcount_in >= ypos) && (hcount_in <= xpos + RECT_WIDTH) && (hcount_in >= xpos ))
+         if((rgb_pixel != 12'h0FF)&&(vcount_in <= (ypos + RECT_HEIGHT)) && (vcount_in >= ypos) && (hcount_in <= xpos + RECT_WIDTH) && (hcount_in >= xpos ))
             begin
                 rgb_out_nxt = rgb_pixel;
             end

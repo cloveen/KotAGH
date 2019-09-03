@@ -45,7 +45,7 @@ module draw_cat(
     );
 
 
-localparam WIDTH= 'd48;
+localparam WIDTH= 'd64;
 localparam HEIGTH = 'd64;
 
 
@@ -63,13 +63,22 @@ begin
         pixel_addr_nxt[11:6] = vcount_in - y_pos_reg;
         pixel_addr_nxt[5:0] = hcount_in - x_pos_reg; 
     end
-    else pixel_addr_nxt = pixel_addr;
+    else 
+    pixel_addr_nxt = pixel_addr;
         
-    rgb_nxt = ( (hcount_buff2>= x_pos_reg) && (hcount_buff2 < (x_pos_reg+WIDTH)) && (vcount_buff2 >= y_pos_reg)&&(vcount_buff2 < (y_pos_reg +HEIGTH))  ) ? rgb_pixel : rgb_buff2;   
+    rgb_nxt = ((rgb_pixel != 12'h0FF)&&(hcount_buff2>= x_pos_reg) && (hcount_buff2 < (x_pos_reg+WIDTH)) && (vcount_buff2 >= y_pos_reg)&&(vcount_buff2 < (y_pos_reg +HEIGTH))  ) ? rgb_pixel : rgb_buff2;   
 end
+/*
+always @*
+begin
+    if((rgb_pixel != 12'h0FF)&&(hcount_buff2>= x_pos_reg) && (hcount_buff2 < (x_pos_reg+WIDTH)) && (vcount_buff2 >= y_pos_reg)&&(vcount_buff2 < (y_pos_reg +HEIGTH))  )
+     rgb_nxt = rgb_pixel;
+    else
+     rgb_nxt = rgb_buff; 
+end
+*/
 
-
-always @(posedge pclk, posedge rst) 
+always @(posedge pclk) 
 begin
 if(rst)
 begin
@@ -115,11 +124,5 @@ begin
  end 
 end
 
-
-        cat_image my_gunwo (
-       .clk(pclk),
-       .rgb(rgb_pixel),  
-       .address(pixel_addr)  
-    );
 endmodule
 

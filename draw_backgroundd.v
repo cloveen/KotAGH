@@ -92,7 +92,7 @@ always @*
           //J
         //  else if (hcount_in>=90 && hcount_in<=95 && vcount_in <=145 && vcount_in >=45) rgb_out_nxt = 12'h5_8_f;
         //  else if ((((hcount_in-75)*(hcount_in-75) + (vcount_in-140)*(vcount_in-140) <= 421) && ((hcount_in-75)*(hcount_in-75) + (vcount_in-140)*(vcount_in-140) >= 225)) && vcount_in>=145) rgb_out_nxt = 12'h5_8_f;
-          else rgb_out_nxt = 12'h8_8_8;    
+          else rgb_out_nxt = 12'hE_8_E;    
         end
     end
 

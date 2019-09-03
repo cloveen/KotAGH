@@ -22,11 +22,11 @@
 
 module char_16x16(
     input wire [7:0] char_xy,
-    input wire [1:0] state_in,
+    input wire [1:0] state_in, 
     output reg [6:0] char_code
     );
     
-    localparam START = 2'b01;
+   localparam START = 2'b01;
     localparam PLAY = 2'b11;
     localparam END = 2'b10;
     

@@ -28,7 +28,7 @@ module cat_image(
 
 
 reg [11:0] rom [0:4095];
-initial $readmemh("../../image_rom.data", rom); 
+initial $readmemh("cat.data", rom); 
 
 always @(posedge clk)
     rgb <= rom[address];
